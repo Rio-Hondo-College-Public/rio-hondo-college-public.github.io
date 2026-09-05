@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student's Transcript</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+  <style>
+    .hero {
+      min-height: 100vh;
+      /* background: url('../static/img/rhc-turf-quad.webp') center center / cover no-repeat; */
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* overlay color */
+      background: rgba(var(--rio-gold-rgb), 1);
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 1.5rem auto;
+    }
+
+    .list-group {
+      color: var(--dark-text);
+      margin-top: 1rem;
+    }
+
+    .list-group-item {
+      background: rgba(255, 255, 255, 0);
+      color: var(--dark-text);
+      border-color: black;
+    }
+
+    .list-group-item:hover {
+      /* hover color */
+      background: rgba(255, 255, 255, 0.3);
+      color: var(--dark-text);
+    }
+
+    h1 {
+      font-weight: 900;
+      font-size: clamp(1.9rem, 6vw, 2.8rem);
+      color: var(--dark-text);
+    }
+
+    @media only screen and (max-width: 330px) {
+      .container {
+        gap: 0;
+      }
+
+      .list-group {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="hero text-center">
+    <div class="container">
+      <h1>Transcript</h1>
+      <div class="list-group">
+
+        <a id="banner-link" href="https://prod-ssb9-student.riohondo.edu:8443/StudentSelfService/ssb/academicTranscript"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Visit the page to view unofficial transcript">
+          View Unofficial Transcript
+        </a>
+        
+        <a href="https://www.parchment.com/u/registration/34612/institution"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Visit the page to request an official transcript">
+          Request Official Transcript
+        </a>
+      
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS (optional - only if you need dropdowns, modals, etc) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/rhc-main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof urlSwitch === "function") {
+        urlSwitch("banner-link", "https://dev-ssb9-student.riohondo.edu:8443/StudentSelfService/ssb/academicTranscript");
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Resources</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+  <style>
+    .hero {
+      min-height: 100vh;
+      /* background: url('../static/img/i-heart-rio-sign-700.webp') center center / cover no-repeat; */
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      /* color: var(--rio-dark-gray, #333); */
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* overlay color */
+      background: rgba(var(--rio-dark-gray-rgb), 1);
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 1.5rem auto;
+    }
+
+    .container {
+      padding-top: 0;
+      margin-top: -1px;
+    }
+
+    .list-group {
+      color: var(--light-text);
+    }
+
+    .list-group-item {
+      background: rgba(255, 255, 255, 0);
+      color: var(--light-text);
+      border-bottom: 1px solid var(--light-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .list-group-item:hover {
+      /* hover color */
+      background: rgba(255, 255, 255, 0.3);
+      color: var(--light-text);
+    }
+
+    .list-group-item i {
+      flex-shrink: 0;
+    }
+
+    .list-group-item-text {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="hero">
+    <div class="container">
+      <div class="list-group">
+
+
+        <a href="https://www.riohondo.edu/administration/hr/salary-schedules-hr-documents/#h-academic-employee-documents"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Faculty collective bargaining agreement, faculty salary schedule, and faculty calendar">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">
+            Academic Employee Documents
+          </span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/hr/salary-schedules-hr-documents/#h-classified-employee-documents"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="CSEA contract, classified staff salary schedule, and position listings">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">
+            Classified Employee Documents
+          </span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/hr/salary-schedules-hr-documents/#h-general-human-resources-documents"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Holiday schedules, EEO plan, and government compensation resources">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">
+            General Human Resources Documents
+          </span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/hr/salary-schedules-hr-documents/#job-descriptions"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="AP 7130, classified, non-instructional (DAP), confidential, and management job descriptions">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">
+            Job Descriptions
+          </span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/hr/salary-schedules-hr-documents/#h-management-and-confidential-employee-documents"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Management and confidential salary schedules, position lists, executive salary info, and administrative org chart">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">
+            Management and Confidential Employee Documents
+          </span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/hr/salary-schedules-hr-documents/#h-unrepresented-employees-documents"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Salary schedule for unrepresented employees">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">
+            Unrepresented Employees Documents
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS (optional - only if you need dropdowns, modals, etc) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

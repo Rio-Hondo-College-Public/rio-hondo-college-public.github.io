@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+  <style>
+    .hero {
+      min-height: 100vh;
+      /* background: url('../static/img/rhc-yellow-gray-outdoor-sign_739.webp') center center / cover no-repeat; */
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      /* color: var(--rio-dark-gray, #333); */
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* overlay color */
+      background: rgba(var(--rio-gold-rgb), 1);
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 1.5rem auto;
+    }
+
+    .container {
+      padding-top: 0;
+      margin-top: -1px;
+    }
+
+    .list-group-item {
+      background: rgba(255, 255, 255, 0);
+      color: var(--dark-text);
+      border-bottom: 1px solid var(--dark-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .list-group-item:hover {
+      /* hover color */
+      background: rgba(255, 255, 255, 0.3);
+      color: var(--dark-text);
+    }
+
+    .list-group-item i {
+      flex-shrink: 0;
+    }
+
+    .list-group-item-text {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="hero">
+    <div class="container">
+      <div class="list-group">
+        <a href="https://districtbusinessportal.lacoe.edu/" target="_blank" rel="noopener noreferrer"
+          class="list-group-item list-group-item-action"
+          title="Visit LACOE District Applications Portal (Online Payment Statements) website">
+          <i class="fas fa-globe"></i>
+          <span class="list-group-item-text">LACOE District Applications Portal (Online Payment Statements)</span>
+        </a>
+        <a href="https://ew2online.w2copy.net/login" target="_blank" rel="noopener noreferrer"
+          class="list-group-item list-group-item-action" title="Get your W2 Copy Online">
+          <i class="fas fa-receipt"></i>
+          <span class="list-group-item-text">W2</span>
+        </a>
+        <a href="https://www.riohondo.edu/wp-content/uploads/2025/01/Bulletin-No.-9-Online_Pay_Statements_User_Guide.pdf"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Online Payment Statements User Guide">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">Online Payment Statements User Guide</span>
+        </a>
+        <a href="https://www.riohondo.edu/wp-content/uploads/2025/01/Direct-Deposit-Authorization-5-3-19.pdf"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Direct Deposit Authorization Form">
+          <i class="fas fa-file-lines"></i>
+          <span class="list-group-item-text">Direct Deposit Authorization Form</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS (optional - only if you need dropdowns, modals, etc) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
