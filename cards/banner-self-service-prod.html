@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" >
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+     <title>Banner Self Service</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+     <style>
+          .hero {
+               min-height: 100vh;
+               background: url('../static/img/interact-with-a-laptop.webp') center center / cover no-repeat;
+               position: relative;
+               display: flex;
+               align-items: flex-start;
+               /* color: var(--rio-dark-gray, #333); */
+          }
+
+          .hero::before {
+               content: "";
+               position: absolute;
+               inset: 0;
+               /* overlay color */
+               background: rgba(var(--bs-secondary-rgb), 0.8);
+               z-index: 1;
+          }
+
+          .hero p {
+               max-width: 720px;
+               margin: 1.5rem auto;
+          }
+
+          .container {
+               position: relative;
+               z-index: 2;
+               width: 100%;
+               max-width: 100%;
+          }
+
+          .list-group {
+               border-radius: 0;
+               border-left-width: 0;
+          }
+
+          .list-group-item {
+               background: rgba(255, 255, 255, 0);
+               color: var(--light-text);
+               border-left: 0;
+               border-right: 0;
+               padding: 0.5rem 1.5rem;
+               display: flex;
+               align-items: center;
+               gap: 0.5rem;
+          }
+
+          .list-group-item-text {
+               flex: 1;
+          }
+
+          .list-group-item:hover {
+               /* hover color */
+               background: rgba(var(--bs-light-rgb), 0.25);
+               color: var(--light-text);
+          }
+     </style>
+</head>
+
+<body>
+	<main class="hero">
+		<div class="container">
+			<div class="list-group">
+				<!--
+				<a href="https://prod-ssb9-sso.riohondo.edu:8443/ssomanager/c/SSB?pkg=https://ssb.riohondo.edu:8443/prodssb/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu"
+							target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+							title="Open Self-Service Banner (SSB)">
+							<i class="fas fa-chalkboard"></i>
+							<span class="list-group-item-text">Self-Service Banner (SSB)</span>
+				</a>
+				-->
+				<a href="https://prod-ssb9-employee.riohondo.edu:8443/EmployeeSelfService/" target="_blank"
+					rel="noopener noreferrer" class="list-group-item list-group-item-action" title="Open Self-Service Banner (SSB) Dashboard">
+					<i class="fas fa-tachometer-alt "></i>
+					<span class="list-group-item-text">Self-Service Banner (SSB) Dashboard</span>
+				</a>
+				<a href="https://prod-ssb9-general.riohondo.edu:8443/BannerGeneralSsb/"
+					target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+					title="Open My Profile - Personal Information">
+					<i class="fas fa-user"></i>
+					<span class="list-group-item-text">My Profile</span>
+				</a>
+				<a href="https://prod-ssb9-general.riohondo.edu:8443/BannerGeneralSsb/"
+					target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+					title="Update My Emergency Contacts">
+					<i class="fas fa-address-book"></i>
+					Update Emergency Contacts
+				</a>
+				<div class="list-group-item" style="padding: 0.5rem 1.5rem; justify-content: flex-start;">
+					<a href="https://prod-ssb9-general.riohondo.edu:8443/BannerGeneralSsb/"
+						target="_blank" rel="noopener noreferrer" class="d-flex align-items-center gap-2"
+						style="background: transparent; color: inherit; text-decoration: none;"
+						title="Update My Race and Ethnicity">
+						<i class="fas fa-people-group"></i>
+						Update Race and Ethnicity
+					</a>
+					<a href="https://www.riohondo.edu/race-and-ethnicity-information/" target="_blank" rel="noopener noreferrer"
+						title="Learn more about updating race and ethnicity" class="d-flex align-items-center p-0"
+						style="color: var(--light-text); text-decoration: none;">
+						<i class="fas fa-circle-question"></i>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+
+
+
+
+
+	<!-- Bootstrap JS (optional - only if you need dropdowns, modals, etc) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institutional Effectiveness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+  <style>
+    .hero {
+      min-height: 100vh;
+      /* background: url('../static/img/campus-drone.webp') center center / cover no-repeat; */
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      color: var(--rio-dark-gray, #333);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* overlay color */
+      background: rgba(var(--rio-dark-blue-rgb), 1);
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 1.5rem auto;
+    }
+
+    .container {
+      padding-top: 0;
+      margin-top: -1px;
+    }
+
+    .list-group {
+      color: var(--light-text);
+    }
+
+    .list-group-item {
+      background: rgba(255, 255, 255, 0);
+      color: var(--light-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .list-group-item:hover {
+      /* hover color */
+      background: rgba(var(--rio-med-blue-rgb), 0.5);
+      color: var(--light-text);
+    }
+
+    .list-group-item i {
+      flex-shrink: 0;
+    }
+
+    .list-group-item-text {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="hero">
+    <div class="container">
+      <div class="list-group">
+
+        <a href="tel:+15629083412"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action" 
+          title="Call us at 562-908-3412">
+          <i class="fa-solid fa-phone"></i>
+          <span class="list-group-item-text">562-908-3412</span>
+        </a>
+
+        <a href="https://riohondo.curriqunet.com/"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Planning & Outcomes Assessment Software">
+          <i class="fa-regular fa-file-lines"></i>
+          <span class="list-group-item-text">Planning & Outcomes Assessment Software</span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/ie/research/"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action" 
+          title="Tableau Dashboards (Public)">
+          <i class="fa-solid fa-chart-line"></i>
+          <span class="list-group-item-text">Tableau Dashboards (Public)</span>
+        </a>
+
+        <a href="https://riohondo0.sharepoint.com/sites/IECampusResources/SitePages/Home.aspx"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Resources & Support - IE Campus Resources SharePoint">
+          <i class="fa-solid fa-laptop"></i>
+          <span class="list-group-item-text">Resources & Support - IE Campus Resources SharePoint</span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/ie/master-plan-documents/"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Master Plan Document">
+          <i class="fa-solid fa-book-open"></i>
+          <span class="list-group-item-text">Master Plan Document</span>
+        </a>
+
+        <a href="https://www.riohondo.edu/administration/ie/research-request/" 
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action" 
+          title="Research &amp; Survey Request Form - Internal">
+          <i class="fa-solid fa-file-pen"></i>
+          <span class="list-group-item-text">Research &amp; Survey Request Form - Internal</span>
+        </a>
+
+        <a href="http://tableau880prd.riohondo.edu/#/signin" 
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action" 
+          title="Tableau Dashboards (Enhanced)">
+          <i class="fa-solid fa-chart-column"></i>
+          <span class="list-group-item-text">Tableau Dashboards (Enhanced) - Account Required</span>
+        </a>
+
+        <a href="https://www.riohondo.edu/about-us/accreditation/" 
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action" 
+          title="Accreditation">
+          <i class="fas fa-certificate"></i>
+          <span class="list-group-item-text">Accreditation</span>
+        </a>
+        
+        <!--
+        <a href="https://riohondo0.sharepoint.com/sites/IECampusResources/SitePages/Institutional-Goals-%26-Objectives.aspx"
+          target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="Institutional Goals and Objectives">
+          <i class="fas fa-bullseye"></i>
+          <span class="list-group-item-text">Institutional Goals &amp; Objectives</span>
+        </a> 
+        <a href="https://www.dropbox.com/sh/gmdr8xz196ycewa/AADLZWYphXl6UwI8c-4kpalEa?dl=0" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">
+          <i class="fas fa-history"></i>
+          <span class="list-group-item-text">IEC Agendas &amp; Minutes 2014-2019</span>
+        </a>
+        <a href="https://go.boarddocs.com/ca/riohondo/Board.nsf/goto?open&amp;id=BS8L4D54B7B9" target="_blank"
+          rel="noopener noreferrer" class="list-group-item list-group-item-action"
+          title="IEC Agendas &amp; Minutes 2020-Current">
+          <i class="fas fa-book-open"></i>
+          <span class="list-group-item-text">IEC Agendas &amp; Minutes 2020-Current</span>
+        </a>
+        <a href="https://w.taskstream.com/SingleSignOnSaml/Login/C6CA7BB83551A913020511A55328464E" target="_blank"
+          rel="noopener noreferrer" class="list-group-item list-group-item-action" title="Open Taskstream">
+          <i class="fas fa-tasks"></i>
+          <span class="list-group-item-text">Taskstream</span>
+        </a> -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS (optional - only if you need dropdowns, modals, etc) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
