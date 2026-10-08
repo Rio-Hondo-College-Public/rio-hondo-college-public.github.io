@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nelnet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+  <style>
+    .hero {
+      min-height: 100vh;
+      background-color: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: var(--rio-dark-gray, #333);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 1.5rem auto;
+    }
+
+    .container {
+      gap: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="hero text-center">
+    <div class="container">
+      <img src="../static/img/nelnet-logo.svg" alt="Nelnet Logo" class="img-fluid">
+      <p class="py-3 my-0 fw-semibold fs-6">View balance, make payment, or set up a flexible payment plan.</p>
+      <a href="https://app1.campuscommerce.com/api/connector/saml/ent/41679" target="_blank" rel="noopener noreferrer"
+        title="Log in to Nelnet" class="btn btn-primary">
+        Pay Bill
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>

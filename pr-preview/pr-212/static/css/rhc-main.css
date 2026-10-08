@@ -1,0 +1,332 @@
+/* Rio palette :root */
+:root {
+    --rio-gold: #f9c900;
+    --rio-gold-rgb: 249, 201, 0;
+    --rio-dark-gray: #414042;
+    --rio-dark-gray-rgb: 65, 64, 66;
+    --rio-dark-blue: #2A6491;
+    --rio-dark-blue-rgb: 42, 100, 145;
+    --rio-med-blue: #2A96C6;
+    --rio-med-blue-rgb: 42, 150, 198;
+    --rio-green: #33A961;
+    --rio-green-rgb: 51, 169, 97;
+    --light-text: #ffffff;
+    --dark-text: #000000;
+
+    /* add dark-green to compliment rio-green color*/
+    --exp-dark-green: #1f7a3c;
+    --exp-dark-green-rgb: 31, 122, 60;
+
+    /* Bootstrap variables – using Rio colors */
+    --bs-primary: var(--rio-gold);
+    --bs-primary-rgb: 249, 201, 0;
+    --bs-secondary: var(--rio-dark-gray);
+    --bs-secondary-rgb: 65, 64, 66;
+
+    /*
+    alternative secondary options with the rgb values for focus shadows: 
+    --bs-secondary: var(--rio-dark-blue);
+    --bs-secondary-rgb: 42, 100, 145; 
+    --bs-secondary: var(--rio-med-blue);
+    --bs-secondary-rgb: 42, 150, 198; 
+    --bs-secondary: var(--rio-green);
+    --bs-secondary-rgb: 51, 169, 97;
+    */
+
+    /* Primary subtle family: keep hue, big tint toward white */
+    --bs-primary-bg-subtle: color-mix(in srgb, var(--bs-primary) 80%, white 20%);
+    --bs-primary-border-subtle: color-mix(in srgb, var(--bs-primary) 20%, white 80%);
+    --bs-primary-text-emphasis: color-mix(in srgb, var(--bs-primary) 80%, black 20%);
+
+    /* Secondary subtle family (dark blue) – similar logic */
+    --bs-secondary-bg-subtle: color-mix(in srgb, var(--bs-secondary) 10%, white 90%);
+    --bs-secondary-border-subtle: color-mix(in srgb, var(--bs-secondary) 25%, white 75%);
+    --bs-secondary-text-emphasis: color-mix(in srgb, var(--bs-secondary) 85%, black 15%);
+
+    /* overrides bootstrap default colors */
+    --bs-success: var(--rio-green);
+    --bs-success-rgb: 51, 169, 97;
+    --bs-danger: #c82333;
+    --bs-danger-rgb: 200, 35, 51;
+    --bs-warning: var(--rio-gold);
+    --bs-warning-rgb: 249, 201, 0;
+    --bs-info: #17a2b8;
+    --bs-info-rgb: 23, 162, 184;
+    --bs-light: #f8f9fa;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark: var(--rio-dark-gray);
+    --bs-dark-rgb: 65, 64, 66;
+
+    /* Optional: tweak some Bootstrap defaults for card feel */
+    --bs-body-bg: #ffffff;
+    --bs-body-color: var(--dark-text);
+}
+
+/* Dark mode overrides (Bootstrap auto-handles via data-bs-theme="dark") */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #121212;
+    --bs-body-color: #e0e0e0;
+    --bs-primary: var(--rio-gold);
+    --bs-primary-rgb: var(--rio-gold-rgb);
+}
+
+/* Global container styling */
+.container {
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 2rem; */
+    width: 100%;
+    max-width: 100%;
+}
+
+.container img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Global link color */
+a {
+    color: var(--rio-dark-blue);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* disabled list-group active & focus states */
+.list-group-item-action:active,
+.list-group-item-action:focus {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* Custom Button Primary using --rio-gold */
+.btn-primary {
+    /* Base State */
+    --bs-btn-color: var(--dark-text);
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+
+    /* Hover State: slightly darker gold */
+    --bs-btn-hover-color: var(--dark-text);
+    --bs-btn-hover-bg: #e0b500;
+    --bs-btn-hover-border-color: #d1a800;
+
+    /* Active/Pressed State */
+    --bs-btn-active-color: var(--dark-text);
+    --bs-btn-active-bg: #d1a800;
+    --bs-btn-active-border-color: #c29a00;
+
+    /* Focus/Outline State */
+    --bs-btn-focus-shadow-rgb: 249, 201, 0;
+    /* Matches your --bs-primary-rgb */
+
+    /* Ensure the utility works if Bootstrap uses text-white internally */
+    color: var(--dark-text) !important;
+    /* global button primarty styles */
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    /* letter-spacing: 0.1rem; */
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--rio-dark-blue);
+    transform: translateY(-2px);
+    border: solid 1px var(--rio-dark-blue);
+    color: var(--light-text) !important;
+}
+
+/* Custom Button Secondary using --rio-dark-gray */
+.btn-secondary {
+    /* Base State */
+    --bs-btn-color: var(--light-text);
+    --bs-btn-bg: var(--bs-secondary);
+    --bs-btn-border-color: var(--bs-secondary);
+
+    /* Hover State: slightly darker gray */
+    --bs-btn-hover-color: var(--light-text);
+    --bs-btn-hover-bg: #2a2a2c;
+    --bs-btn-hover-border-color: #1f1f21;
+
+    /* Active/Pressed State */
+    --bs-btn-active-color: var(--light-text);
+    --bs-btn-active-bg: #1f1f21;
+    --bs-btn-active-border-color: #141415;
+
+    /* Focus/Outline State */
+    --bs-btn-focus-shadow-rgb: 65, 64, 66;
+    /* Matches --rio-dark-gray-rgb */
+
+    /* Ensure the utility works if Bootstrap uses text-white internally */
+    color: var(--light-text) !important;
+}
+
+/* Global accordion styling */
+.accordion {
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-btn-icon: url("https://www.riohondo.edu/wp-content/themes/rio-custom-theme/acf-blocks/accordion/assets/icon-accordion.svg");
+    --bs-accordion-btn-active-icon: url("https://www.riohondo.edu/wp-content/themes/rio-custom-theme/acf-blocks/accordion/assets/icon-accordion.svg");
+    --bs-accordion-bg: #ffffff;
+    --bs-accordion-btn-bg: #ffffff;
+    --bs-accordion-active-bg: #ffffff;
+    --bs-accordion-btn-color: #000000;
+    --bs-accordion-active-color: #000000;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-btn-focus-border-color: transparent;
+    --bs-accordion-btn-focus-box-shadow: none;
+    padding: 0 1rem;
+}
+
+.accordion .accordion-item {
+    background-color: #ffffff;
+    border: 0;
+    border-bottom: 2px solid var(--rio-gold);
+}
+
+.accordion .accordion-item:first-child {
+    border-top: 2px solid var(--rio-gold);
+}
+
+.accordion .accordion-button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding: 1rem 1rem;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: none;
+}
+
+.accordion .accordion-button:hover,
+.accordion .accordion-button:not(.collapsed):hover {
+    color: var(--rio-med-blue);
+    text-decoration: underline;
+}
+
+.accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion .accordion-button::after {
+    background-image: url("https://www.riohondo.edu/wp-content/themes/rio-custom-theme/acf-blocks/accordion/assets/icon-accordion.svg") !important;
+    background-size: 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    transform: rotate(180deg);
+}
+
+.accordion .accordion-button:not(.collapsed)::after {
+    background-image: url("https://www.riohondo.edu/wp-content/themes/rio-custom-theme/acf-blocks/accordion/assets/icon-accordion.svg") !important;
+    transform: rotate(0deg);
+}
+
+.accordion .accordion-button:hover,
+.accordion .accordion-button:not(.collapsed):hover {
+    color: var(--rio-med-blue);
+    text-decoration: underline;
+}
+
+.accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion .accordion-button::after {
+    background-image: url("https://www.riohondo.edu/wp-content/themes/rio-custom-theme/acf-blocks/accordion/assets/icon-accordion.svg") !important;
+    background-size: 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    transform: rotate(180deg);
+}
+
+
+.accordion .accordion-body {
+    background-color: #ffffff;
+}
+
+/* adjust the icon sizes for accordion buttons and list group items */
+.accordion-button i {
+    flex-shrink: 0;
+    width: 1.25em;
+    margin-right: 0.7rem !important;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Force white chevrons for Accordions with secondary and green classes */
+.accordion.secondary .accordion-button::after,
+.accordion.secondary .accordion-button:not(.collapsed)::after,
+.accordion.green .accordion-button::after,
+.accordion.green .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+/* Global list styling */
+.list-group {
+    border-radius: 0;
+    border-left-width: 0;
+    width: 100%;
+}
+
+.list-group-item {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.5rem 1rem;
+}
+
+.list-group-item i {
+    flex-shrink: 0;
+    width: 1.25rem;
+    text-align: center;
+}
+
+/* very small viewport for Experience cards */
+@media only screen and (max-width: 330px) {
+    .hero p {
+        padding: 0.5rem;
+    }
+
+    .btn {
+        margin: 0 1rem;
+        font-size: 0.8rem !important;
+    }
+
+    .container {
+        gap: 0.3rem;
+    }
+
+    .container img {
+        max-width: 100%;
+    }
+
+}
+
+/* very small viewport for Experience cards */
+@media only screen and (max-width: 649px) {
+    .accordion {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .accordion .accordion-button {
+        font-size: 1rem;
+        padding: 1rem .75rem;
+    }
+}
