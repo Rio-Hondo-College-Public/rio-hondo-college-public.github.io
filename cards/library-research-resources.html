@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library (Research)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+
+    <link rel="stylesheet" href="../static/css/rhc-main.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+    >
+
+    <style>
+      main {
+        padding: 1rem 0.75rem; /* very tight for mobile widgets */
+        max-width: 1400px;
+        margin: auto;
+      }
+
+      .launch-grid {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(110px, 1fr)
+        ); /* fits 3 at ~370px+ */
+        gap: 0.75rem; /* smaller gap saves space */
+      }
+
+      .launch-card {
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 0.6rem;
+        overflow: hidden; /* clean edges if shadow clips */
+      }
+
+      .launch-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .launch-card:hover .card-icon {
+        color: rgba(var(--bs-primary-rgb), 0.75);
+        transform: scale(1.12);
+      }
+
+      .card-body {
+        text-align: center;
+        padding: 1rem 0.5rem; /* much tighter padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        min-height: 110px; /* consistent small height */
+      }
+
+      .card-icon {
+        font-size: 2.6rem; /* smaller icon for narrow cards */
+        margin-bottom: 0.6rem;
+        color: var(--bs-primary);
+        display: block;
+      }
+
+      .card-title {
+        margin: 0;
+        font-size: 1rem; /* readable but compact */
+        color: var(--bs-body-color);
+        line-height: 1.25;
+        font-weight: 500; /* slight emphasis helps legibility */
+      }
+
+      .card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        height: 100%;
+      }
+
+      /* Super-narrow phones / very tight Ellucian card embed */
+      @media (max-width: 400px) {
+        .launch-grid {
+          grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+          gap: 0.6rem;
+        }
+        .card-icon {
+          font-size: 2.4rem;
+        }
+
+        .card-body {
+          padding: 0.9rem 0.4rem;
+          min-height: 100px;
+        }
+
+        .card-title {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+      <div class="launch-grid m-10">
+        <div class="launch-card shadow-sm border-0 p-10">
+          <a
+            href="https://caccl-riohondo.primo.exlibrisgroup.com/discovery/search?vid=01CACCL_RIOHONDO:RHC"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-link"
+            title="Go to OneSearch Library Catalog"
+          >
+            <div class="card-body">
+              <i class="fas fa-solid fa-magnifying-glass card-icon" aria-hidden="true"></i>
+              <h2 class="card-title">OneSearch</h2>
+            </div>
+          </a>
+        </div>
+
+        <div class="launch-card shadow-sm border-0">
+          <a
+            href="https://libguides.riohondo.edu/az.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-link"
+            title="Go to A-Z Databases List"
+          >
+            <div class="card-body">
+              <i class="fas fa-solid fa-newspaper card-icon" aria-hidden="true"></i>
+              <h2 class="card-title">Databases</h2>
+            </div>
+          </a>
+        </div>
+
+        <!-- <div class="launch-card shadow-sm border-0">
+          <a
+            href="https://scholar.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-link"
+            title="Go to Google Scholar"
+          >
+            <div class="card-body">
+              <i class="fas fa-brands fa-google-scholar card-icon" aria-hidden="true"></i>
+              <h2 class="card-title">Google Scholar</h2>
+            </div>
+          </a>
+        </div>
+
+        <div class="launch-card shadow-sm border-0">
+          <a
+            href="https://libguides.riohondo.edu/az/oer-asccc-oeri"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-link"
+            title="Go to OER (ASCCC OERI) List"
+          >
+            <div class="card-body">
+              <i class="fa-brands fa-creative-commons card-icon" aria-hidden="true"></i>
+              <h2 class="card-title">OER (ASCCC OERI)</h2>
+            </div>
+          </a>
+        </div> -->
+
+      </div>
+
+    <div class="container-fluid m-0 p-0">
+        <div class="accordion" id="accordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                        title="Click to expand/collapse">
+                        <i class="fas fa-solid fa-map me-2"></i>
+                        Guides
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <ul style="list-style-type: square;">
+                            <li>
+                                <a href="https://libguides.riohondo.edu/index.php"
+                                    target="_blank" rel="noreferrer noopener" title="Research Guides">
+                                    Research Guides
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://libguides.riohondo.edu/ResearchPaperTopics"
+                                    target="_blank" rel="noreferrer noopener" title="Research Paper Topics">
+                                    Research Paper Topics
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                        title="Click to expand/collapse">
+                        <i class="fas fa-solid fa-file me-2"></i>
+                        Handouts
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <ul style="list-style-type: square;">
+                            <li>
+                                <a href="https://libguides.riohondo.edu/researchresources/citation_guides"
+                                    target="_blank" rel="noreferrer noopener" title="Citation Style Guides">
+                                    Citation Style Guides
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://libguides.riohondo.edu/researchresources/info_lit_handouts"
+                                    target="_blank" rel="noreferrer noopener" title="Information Literacy Handouts">
+                                    Information Literacy Handouts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                        title="Click to expand/collapse">
+                        <i class="fas fa-solid fa-toolbox me-2"></i>
+                        Tools
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <ul style="list-style-type: square;">
+                            <li>
+                                <a href="https://libguides.riohondo.edu/db/mlahandbookplus"
+                                    target="_blank" rel="noreferrer noopener" title="MLA Handbook Plus">
+                                    MLA Handbook Plus <i class="fas fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://owl.purdue.edu/owl/research_and_citation/resources.html"
+                                    target="_blank" rel="noreferrer noopener" title="Purdue OWL">
+                                    Purdue OWL <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://zbib.org/"
+                                    target="_blank" rel="noreferrer noopener" title="ZoteroBib">
+                                    ZoteroBib <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS bundle (includes Popper) – optional now, but keep if using other BS features -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
