@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width x Height</title>
+    <style>
+        #dimensions {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            color: #ffd900;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 16px;
+            z-index: 9999;
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
+        }
+
+        #width,
+        #height {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dimensions">
+        W:<span id="width">0</span>px<br>H:<span id="height">0</span>px
+    </div>
+
+    <script>
+        function updateDimensions() {
+            document.getElementById('width').textContent = window.innerWidth;
+            document.getElementById('height').textContent = window.innerHeight;
+        }
+
+        // Update on page load
+        updateDimensions();
+
+        // Update on window resize
+        window.addEventListener('resize', updateDimensions);
+    </script>
+</body>
+
+</html>
